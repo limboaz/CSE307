@@ -14,14 +14,14 @@ fun sumList(li) =
     | x::xs => x + sumList(xs);
 
 (*for more complicated stuff*)
-(*check if the elements in this list are divisible by some integer*)
+(*check if the elements in this list are divisible by some integer num*)
 fun indivisible (num, li) = 
     case li of
     [] => true
     | x::xs => if x mod num = 0 then false
                 else indivisible(num, xs);
 
-(*check if elements in one list is in order*)
+(*check if elements in one list are in ascending order*)
 fun inorder li =
     case li of
     [] => true
