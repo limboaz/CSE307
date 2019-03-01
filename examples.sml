@@ -4,7 +4,7 @@ fun fibonacci 0 = 0  (* Base case *)
   | fibonacci 1 = 1  (* Base case *)
   | fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)  (* Recursive case *)
 
-fun sumList nil = 0
+fun sumList nil = 0 (*Base case*)
   | sumList (x::xs) = x + sumList(xs); (*for a list of this pattern, we can operate like this*)
 
 (*or in this way*)
@@ -28,7 +28,7 @@ fun inorder li =
     | x::[] => true
     | x::(y::ys) => if x > y then false else inorder(y::ys);
 
-(*manipulate tuples*)
+(*manipulate tuples: adding the tuples in the list to get (sum of the first element, sum of the second element) *)
 fun addTuples (li: (int * int) list) = 
     case li of
     [] => (0,0)
